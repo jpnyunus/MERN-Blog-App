@@ -1,0 +1,268 @@
+body {
+    color: #333;
+    background-color: #fafafa;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+main {
+    padding: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 0 0.8rem;
+    color: #2c3e50;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+p {
+    margin: 0 0 0.8rem;
+    color: #444;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+header a.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+header nav {
+    display: flex;
+    gap: 1rem;
+}
+
+header nav a {
+    font-weight: 500;
+    color: #34495e;
+    transition: color 0.2s ease;
+}
+
+header nav a:hover {
+    color: #3498db;
+}
+
+/* Posts */
+div.post {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.2s ease;
+}
+
+div.post:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+    div.post {
+        grid-template-columns: 1fr;
+    }
+}
+
+div.post div.image {
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+div.post div.texts h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+div.post p.info {
+    margin: 0.5rem 0;
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+div.post p.summary {
+    font-size: 0.95rem;
+    margin-top: 0.8rem;
+    line-height: 1.5;
+    color: #444;
+}
+
+form.login, form.register {
+    max-width: 350px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    margin-bottom: 1rem;
+    width: 91%;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+button {
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    background-color: #3498db;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+form.login h1, form.register h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Post Page */
+div.post-page div.image {
+    max-height: 350px;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+div.post-page div.image img {
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+}
+
+div.post-page h1 {
+    text-align: center;
+    margin: 1rem 0 0.5rem;
+    font-size: 2rem;
+}
+
+div.post-page time {
+    text-align: center;
+    display: block;
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+}
+
+div.post-page div.author {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+div.content p {
+    line-height: 1.6;
+    margin: 1rem 0;
+}
+
+div.content li {
+    margin-bottom: 0.4rem;
+}
+
+div.edit-row {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+div.post-page a.edit-btn {
+    background-color: #3498db;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+div.post-page a.edit-btn:hover {
+    background-color: #2980b9;
+}
+
+a svg {
+    height: 18px;
+}
+
+.errormsg {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 0.8rem;
+    margin: 1rem 0;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fadeIn {
+    animation: fadeIn 0.3s ease-in-out;
+}   
